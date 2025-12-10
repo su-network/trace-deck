@@ -1,0 +1,56 @@
+[package]
+name = "trace-deck"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+# Document parsing
+pdf = "0.9"
+docx-rs = "0.4"
+image = "0.25"
+
+# Async runtime
+tokio = { version = "1", features = ["full"] }
+futures = "0.3"
+
+# Data serialization
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+# Error handling
+thiserror = "1.0"
+anyhow = "1.0"
+
+# Logging
+tracing = "0.1"
+tracing-subscriber = "0.3"
+
+# Performance
+rayon = "1.8"
+parking_lot = "0.12"
+
+# CLI
+clap = { version = "4", features = ["derive"] }
+
+# Beautiful CLI output
+colored = "2.1"
+indicatif = "0.17"
+console = "0.15"
+comfy-table = "7"
+textwrap = "0.16"
+
+# Better formatting
+owo-colors = "4"
+
+[lib]
+name = "trace_deck"
+path = "src/lib.rs"
+
+[[bin]]
+name = "trace-deck"
+path = "src/main.rs"
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1

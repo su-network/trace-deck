@@ -2,6 +2,9 @@
 
 Don't read the deck. Audit the data.
 
+<img width="963" height="412" alt="image" src="https://github.com/user-attachments/assets/5cd4e1dd-28f3-4a1a-9752-94afe67970eb" />
+
+
 ## About
 
 Trace-deck is a headless engine that turns pitch decks into structured investment memos. It extracts chart data, verifies market claims against public APIs, and flags risks automatically.
